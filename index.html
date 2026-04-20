@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Apple Deployment & Management Practice Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Apple Deployment &amp; Management – Practice Test</h1>
+      <p class="subtitle">Unofficial practice simulator for learning and revision.</p>
+    </header>
+
+    <main>
+      <!-- Start Screen -->
+      <section id="start-screen">
+        <p>Click start to begin a randomised multiple‑choice test.</p>
+        <label>
+          Number of questions:
+          <input type="number" id="question-count-input" min="5" max="80" value="20" />
+        </label>
+        <button id="start-btn">Start Quiz</button>
+      </section>
+
+      <!-- Quiz Screen -->
+      <section id="quiz-screen" class="hidden">
+        <div class="quiz-header">
+          <div id="progress-text"></div>
+          <div id="score-text"></div>
+        </div>
+
+        <div id="question-text"></div>
+
+        <ul id="options-list"></ul>
+
+        <div class="quiz-controls">
+          <button id="prev-btn">Previous</button>
+          <button id="next-btn">Next</button>
+          <button id="submit-btn">Submit Quiz</button>
+        </div>
+      </section>
+
+      <!-- Result Screen -->
+      <section id="result-screen" class="hidden">
+        <h2>Your Results</h2>
+        <p id="final-score"></p>
+        <button id="review-btn">Review Answers</button>
+        <button id="restart-btn">Restart Quiz</button>
+
+        <div id="review-container" class="hidden"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
